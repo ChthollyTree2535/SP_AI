@@ -1,0 +1,53 @@
+{
+  "args": {
+    "data_dir": "data",
+    "output_dir": "runs",
+    "run_name": "final_hr_diag_256_pos020_alpha070",
+    "epochs": 5,
+    "batch_size": 48,
+    "lr": 0.0003,
+    "weight_decay": 0.0001,
+    "seed": 42,
+    "val_frac": 0.15,
+    "test_frac": 0.15,
+    "model_arch": "diagnostic_resnet_v2",
+    "base_channels": 24,
+    "height": 256,
+    "width": 192,
+    "crop": [
+      68,
+      184,
+      647,
+      950
+    ],
+    "crop_jitter": 5,
+    "num_workers": 2,
+    "train_pos_fraction": 0.2,
+    "focal_gamma": 2.0,
+    "focal_alpha": 0.7,
+    "patience": 6,
+    "threshold": 0.5,
+    "cpu": false
+  },
+  "device": "cuda",
+  "torch_version": "2.7.1+cu118",
+  "model_arch": "diagnostic_resnet_v2",
+  "trainable_parameters": 1130441,
+  "class_counts": {
+    "train": {
+      "total": 13028,
+      "positive": 1587,
+      "negative": 11441
+    },
+    "val": {
+      "total": 2792,
+      "positive": 340,
+      "negative": 2452
+    },
+    "test": {
+      "total": 2792,
+      "positive": 340,
+      "negative": 2452
+    }
+  }
+}
